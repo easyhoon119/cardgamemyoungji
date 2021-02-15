@@ -2,7 +2,7 @@
     'use strict';
     let karo = 4;
     let sero = 3;
-    let color = ['red','red', 'orange', 'orange', 'green', 'green', 'yellow', 'yellow', 'white', 'white', 'navy', 'navy'];
+    let color = ['#FF2D00','#FF2D00', '#FF8600', '#FF8600', '#00EC3D', '#00EC3D', '#FFF100', '#FFF100', '#FAF9F9', '#FAF9F9', '#8456F8', '#8456F8'];
     let color_sub = color.slice();
     let back_color = [];
     let click_flag = true;
