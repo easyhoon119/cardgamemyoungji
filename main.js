@@ -1,17 +1,17 @@
 (function (window, document){
     'use strict';
-    let karo = 4;
-    let sero = 3;
-    let color = ['#FF2D00','#FF2D00', '#FF8600', '#FF8600', '#00EC3D', '#00EC3D', '#FFF100', '#FFF100', '#FAF9F9', '#FAF9F9', '#8456F8', '#8456F8'];
-    let color_sub = color.slice();
-    let back_color = [];
-    let click_flag = true;
-    let count_card = [];
-    let complete_card = [];
-    let start_time;
-    let total_time;
+    var karo = 4;
+    var sero = 3;
+    var color = ['#FF2D00','#FF2D00', '#FF8600', '#FF8600', '#00EC3D', '#00EC3D', '#FFF100', '#FFF100', '#FAF9F9', '#FAF9F9', '#8456F8', '#8456F8'];
+    var color_sub = color.slice();
+    var back_color = [];
+    var click_flag = true;
+    var count_card = [];
+    var complete_card = [];
+    var start_time;
+    var total_time;
     function shupple (){
-        for (let i = 0; color.length > 0; i += 1) {
+        for (var i = 0; color.length > 0; i += 1) {
             back_color = back_color.concat(color.splice(Math.floor(Math.random()* color.length), 1));
         }
     }
@@ -19,15 +19,15 @@
     console.log(back_color);
     function card_setting(karo, sero) {
         click_flag = false;
-        let container = document.querySelector('.containers');
-        for (let i = 0; i < karo * sero; i += 1) {
-            let card = document.createElement('div');
+        var container = document.querySelector('.containers');
+        for (var i = 0; i < karo * sero; i += 1) {
+            var card = document.createElement('div');
             card.className = 'card';
-            let cardInner = document.createElement('div');
+            var cardInner = document.createElement('div');
             cardInner.className = 'card-inner';
-            let cardFront = document.createElement('div');
+            var cardFront = document.createElement('div');
             cardFront.className = 'card-front';
-            let cardBack = document.createElement('div');
+            var cardBack = document.createElement('div');
             cardBack.className = 'card-back';
             cardBack.style.backgroundColor = back_color[i];
             cardInner.appendChild(cardFront);
@@ -45,7 +45,7 @@
                                 count_card = [];
                                 setTimeout(function () {
                                     if (complete_card.length === 12) {
-                                        let compl_time = new Date();
+                                        var compl_time = new Date();
                                         total_time = (compl_time - start_time) / 1000;
                                         alert('성공!' + total_time + '초 걸렸습니다!');
                                         container.innerHTML = '';
