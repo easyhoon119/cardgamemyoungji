@@ -26,8 +26,8 @@ body {
 .containers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 450px;
-  height: 400px;
+  max-width: 450px;
+  max-height: 400px;
   margin: auto;
   padding-top: 50px;
 }
@@ -68,4 +68,14 @@ body {
 
 .card-back {
   transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 60px;
+    height: 90px;
+    perspective: 140px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
