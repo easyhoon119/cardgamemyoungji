@@ -10,13 +10,15 @@ var count_card = [];
 var first_card = [];
 var complete_card = [];
 var start_time;
+var retryState = false;
+var l = 0;
 var total_time;
 function shupple() {
     for (var i = 0; color.length > 0; i += 1) {
         back_color = back_color.concat(color.splice(Math.floor(Math.random() * color.length), 1));
     }
 }
-
+var innertext = document.querySelector('.inner-text');
 console.log(back_color);
 function card_setting(karo, sero) {
     click_flag = false;
@@ -49,16 +51,30 @@ function card_setting(karo, sero) {
                             count_card = [];
                             setTimeout(function () {
                                 if (complete_card.length === 12) {
+                                    var retry = document.createElement('div');
+                                    retry.className = 'retry-btn';
+                                    var hide = document.createElement('div');
+                                    hide.className = 'hide';
+                                    var another = document.createElement('div');
+                                    another.className = 'another-btn';
+                                    document.querySelector('.background').appendChild(hide);
+                                    hide.appendChild(another);
+                                    another.appendChild(retry);
+                                    retry.innerHTML = '다시하기';
                                     var compl_time = new Date();
                                     total_time = (compl_time - start_time) / 1000;
-                                    alert('성공!' + total_time + '초 걸렸습니다!');
-                                    container.innerHTML = '';
-                                    color = color_sub.slice();
-                                    back_color = [];
-                                    complete_card = [];
-                                    start_time = null;
-                                    shupple();
-                                    card_setting(karo, sero);
+                                    var msg = total_time + '초 걸렸습니다.';
+                                    hide.style.display = 'block';
+                                    retry.addEventListener('click', function () {
+                                        container.innerHTML = '';
+                                        color = color_sub.slice();
+                                        back_color = [];
+                                        complete_card = [];
+                                        start_time = null;
+                                        hide.style.display = 'none';
+                                        shupple();
+                                        card_setting(karo, sero);
+                                    });
                                 }
                             }, 1000);
                         }
