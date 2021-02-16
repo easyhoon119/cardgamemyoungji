@@ -7,6 +7,7 @@ var color_sub = color.slice();
 var back_color = [];
 var click_flag = true;
 var count_card = [];
+var first_card = [];
 var complete_card = [];
 var start_time;
 var total_time;
@@ -23,6 +24,7 @@ function card_setting(karo, sero) {
     for (var i = 0; i < karo * sero; i += 1) {
         var card = document.createElement('div');
         card.className = 'card';
+        card.id = i;
         var cardInner = document.createElement('div');
         cardInner.className = 'card-inner';
         var cardFront = document.createElement('div');
@@ -35,10 +37,12 @@ function card_setting(karo, sero) {
         card.appendChild(cardInner);
         (function (c) {
             card.addEventListener('click', function () {
-                if (click_flag && !complete_card.includes(c)) {
+                if (click_flag && !complete_card.includes(c) && c.id !== first_card[first_card.length - 1]) {
                     c.classList.toggle('flipped');
+                    first_card.push(c.id);
                     count_card.push(c);
                     if (count_card.length == 2) {
+                        first_card = [];
                         if (count_card[0].querySelector('.card-back').style.backgroundColor === count_card[1].querySelector('.card-back').style.backgroundColor) {
                             complete_card.push(count_card[0]);
                             complete_card.push(count_card[1]);
