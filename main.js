@@ -51,19 +51,8 @@ function card_setting(karo, sero) {
                             complete_card.push(count_card[0]);
                             complete_card.push(count_card[1]);
                             count_card = [];
-
                             setTimeout(function () {
                                 if (complete_card.length === 12) {
-                                    var retry = document.createElement('div');
-                                    retry.className = 'retry-btn';
-                                    var hide = document.createElement('div');
-                                    hide.className = 'hide';
-                                    var another = document.createElement('div');
-                                    another.className = 'another-btn';
-                                    another.appendChild(retry);
-                                    hide.appendChild(another);
-                                    container2.appendChild(hide);
-                                    document.querySelector('.background').appendChild(container2);
                                     retry.innerHTML = '다시하기';
                                     var compl_time = new Date();
                                     total_time = (compl_time - start_time) / 1000;
@@ -81,7 +70,6 @@ function card_setting(karo, sero) {
                                     });
                                 }
                             }, 1000);
-
                         }
                         else {
                             click_flag = false;
@@ -100,6 +88,16 @@ function card_setting(karo, sero) {
         document.querySelector('.background').appendChild(container);
         document.body.appendChild(document.querySelector('.background'))
     }
+    var retry = document.createElement('div');
+    retry.className = 'retry-btn';
+    var hide = document.createElement('div');
+    hide.className = 'hide';
+    var another = document.createElement('div');
+    another.className = 'another-btn';
+    another.appendChild(retry);
+    hide.appendChild(another);
+    container2.appendChild(hide);
+    document.querySelector('.background').appendChild(container2);
 
     document.querySelectorAll('.card').forEach(function (card, index) {
         setTimeout(function () {
