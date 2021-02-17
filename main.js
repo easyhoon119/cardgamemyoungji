@@ -71,8 +71,7 @@ function card_setting(karo, sero) {
                                     hide.style.display = 'block';
                                     retry.addEventListener('click', function () {
                                         hide.style.display = 'none';
-                                        container.innerHTML = '';
-                                        container2.innerHTML = '';
+                                        document.querySelector('.background').innerHTML = '';
                                         color = color_sub.slice();
                                         back_color = [];
                                         complete_card = [];
