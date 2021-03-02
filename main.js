@@ -119,7 +119,7 @@ function card_setting(karo, sero) {
         });
         click_flag = true;
         start_time = new Date();
-    }, 4000);
+    }, 3000);
 }
 
 shupple();
