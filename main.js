@@ -9,6 +9,7 @@ var click_flag = true;
 var count_card = [];
 var first_card = [];
 var complete_card = [];
+var cnt = 0;
 var start_time;
 var retryState = false;
 var l = 0;
@@ -57,7 +58,6 @@ function card_setting(karo, sero) {
                                 if (complete_card.length === 12) {
                                     retry.innerHTML = '다시하기';
                                     var compl_time = new Date();
-                                    var cnt = 0;
                                     total_time = (compl_time - start_time) / 1000;
                                     var msg = total_time + '초 걸렸습니다.';
                                     if (cnt == 0) {
@@ -71,6 +71,7 @@ function card_setting(karo, sero) {
                                         color = color_sub.slice();
                                         back_color = [];
                                         complete_card = [];
+                                        cnt = 0;
                                         start_time = null;
                                         shupple();
                                         card_setting(karo, sero);
