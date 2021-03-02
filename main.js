@@ -57,9 +57,13 @@ function card_setting(karo, sero) {
                                 if (complete_card.length === 12) {
                                     retry.innerHTML = '다시하기';
                                     var compl_time = new Date();
+                                    var cnt = 0;
                                     total_time = (compl_time - start_time) / 1000;
                                     var msg = total_time + '초 걸렸습니다.';
-                                    alert(msg);
+                                    if (cnt == 0) {
+                                        alert(msg);
+                                        cnt += 1;
+                                    }
                                     hide.style.display = 'block';
                                     retry.addEventListener('click', function () {
                                         hide.style.display = 'none';
