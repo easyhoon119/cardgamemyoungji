@@ -57,6 +57,7 @@ function card_setting(karo, sero) {
                                     var compl_time = new Date();
                                     total_time = (compl_time - start_time) / 1000;
                                     var msg = total_time + '초 걸렸습니다.';
+                                    alert(msg);
                                     hide.style.display = 'block';
                                     retry.addEventListener('click', function () {
                                         hide.style.display = 'none';
@@ -64,6 +65,7 @@ function card_setting(karo, sero) {
                                         color = color_sub.slice();
                                         back_color = [];
                                         complete_card = [];
+                                        msg = '';
                                         start_time = null;
                                         shupple();
                                         card_setting(karo, sero);
@@ -111,7 +113,7 @@ function card_setting(karo, sero) {
         });
         click_flag = true;
         start_time = new Date();
-    }, 5000);
+    }, 4000);
 }
 
 shupple();

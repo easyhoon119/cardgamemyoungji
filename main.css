@@ -17,12 +17,20 @@ body {
 .background {
   width: 100%;
   height: 100%;
-  background-image: url("branch-with-beautiful-sakura-flowers-falling-petals-realistic-composition-illustration_1284-31302.jpg");
+  background-image: url("background.png");
   background-position: center;
   background-size: cover;
 }
 
 /* BODY */
+.mark {
+  background: url("mark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+}
 .containers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -32,9 +40,9 @@ body {
 
 .card {
   margin: auto;
-  margin-top: 30px;
-  width: 90px;
-  height: 120px;
+  margin-top: 10px;
+  width: 95px;
+  height: 130px;
   perspective: 200px;
 }
 
@@ -99,10 +107,10 @@ body {
 
 @media screen and (max-width: 768px) {
   .card {
-    width: 60px;
+    width: 70px;
     height: 90px;
     perspective: 140px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
