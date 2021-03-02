@@ -25,6 +25,8 @@ function card_setting(karo, sero) {
     container.className = 'containers';
     var container2 = document.createElement('div');
     container2.className = 'container2';
+    var mark = document.createElement('div');
+    mark.className = 'mark';
     for (var i = 0; i < karo * sero; i += 1) {
         var card = document.createElement('div');
         card.className = 'card';
@@ -65,7 +67,6 @@ function card_setting(karo, sero) {
                                         color = color_sub.slice();
                                         back_color = [];
                                         complete_card = [];
-                                        msg = '';
                                         start_time = null;
                                         shupple();
                                         card_setting(karo, sero);
@@ -87,6 +88,7 @@ function card_setting(karo, sero) {
             });
         })(card);
         container.appendChild(card);
+        document.querySelector('.background').appendChild(mark);
         document.querySelector('.background').appendChild(container);
         document.body.appendChild(document.querySelector('.background'))
     }
@@ -100,7 +102,6 @@ function card_setting(karo, sero) {
     hide.appendChild(another);
     container2.appendChild(hide);
     document.querySelector('.background').appendChild(container2);
-
     document.querySelectorAll('.card').forEach(function (card, index) {
         setTimeout(function () {
             card.classList.add('flipped');
