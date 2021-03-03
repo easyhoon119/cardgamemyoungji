@@ -121,7 +121,7 @@ function card_setting(karo, sero) {
         });
         click_flag = true;
         start_time = new Date();
-    }, 4000);
+    }, 2750);
 }
 
 shupple();
