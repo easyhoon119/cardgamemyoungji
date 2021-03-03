@@ -2,7 +2,7 @@
 'use strict';
 var karo = 4;
 var sero = 3;
-var color = ['#FF2D00', '#FF2D00', '#FF8600', '#FF8600', '#00EC3D', '#00EC3D', '#FFF100', '#FFF100', '#FAF9F9', '#FAF9F9', '#8456F8', '#8456F8'];
+var color = ['baekma.jpeg', 'baekma.jpeg', 'changjo.jpg', 'changjo.jpg', 'chaplegwan.jpg', 'chaplegwan.jpg', 'chargwan.jpg', 'chargwan.jpg', 'chasaedae.jpeg', 'chasaedae.jpeg', 'undongjang.jpg', 'undongjang.jpg'];
 var color_sub = color.slice();
 var back_color = [];
 var click_flag = true;
@@ -38,7 +38,9 @@ function card_setting(karo, sero) {
         cardFront.className = 'card-front';
         var cardBack = document.createElement('div');
         cardBack.className = 'card-back';
-        cardBack.style.backgroundColor = back_color[i];
+        cardBack.style.backgroundImage = 'url(' + back_color[i] + ')';
+        cardBack.style.backgroundSize = 'cover';
+        cardBack.style.backgroundPosition = 'center';
         cardInner.appendChild(cardFront);
         cardInner.appendChild(cardBack);
         card.appendChild(cardInner);
@@ -50,7 +52,7 @@ function card_setting(karo, sero) {
                     count_card.push(c);
                     if (count_card.length == 2) {
                         first_card = [];
-                        if (count_card[0].querySelector('.card-back').style.backgroundColor === count_card[1].querySelector('.card-back').style.backgroundColor) {
+                        if (count_card[0].querySelector('.card-back').style.backgroundImage === count_card[1].querySelector('.card-back').style.backgroundImage) {
                             complete_card.push(count_card[0]);
                             complete_card.push(count_card[1]);
                             count_card = [];
@@ -119,7 +121,7 @@ function card_setting(karo, sero) {
         });
         click_flag = true;
         start_time = new Date();
-    }, 2500);
+    }, 4000);
 }
 
 shupple();
