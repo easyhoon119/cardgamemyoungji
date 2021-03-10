@@ -112,7 +112,7 @@ function card_setting(karo, sero) {
     document.querySelectorAll('.card').forEach(function (card, index) {
         setTimeout(function () {
             card.classList.add('flipped');
-        }, 1000 + 100 * index);
+        }, 3000 + 100 * index);
     });
 
     setTimeout(function () {
@@ -121,7 +121,7 @@ function card_setting(karo, sero) {
         });
         click_flag = true;
         start_time = new Date();
-    }, 2750);
+    }, 4750);
 }
 
 shupple();

@@ -20,9 +20,19 @@ body {
   background-image: url("spring-background.webp");
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 
 /* BODY */
+.start_btn {
+  width: 80px;
+  height: 65px;
+  background-color: pink;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
 .mark {
   background: url("mark.png");
   background-repeat: no-repeat;
