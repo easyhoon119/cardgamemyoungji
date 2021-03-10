@@ -112,7 +112,7 @@ function card_setting(karo, sero) {
     document.querySelectorAll('.card').forEach(function (card, index) {
         setTimeout(function () {
             card.classList.add('flipped');
-        }, 3000 + 100 * index);
+        }, 2000 + 100 * index);
     });
 
     setTimeout(function () {
@@ -121,10 +121,20 @@ function card_setting(karo, sero) {
         });
         click_flag = true;
         start_time = new Date();
-    }, 4750);
+    }, 3750);
+
+}
+function starting() {
+    const start_btn = document.querySelector('.start_btn');
+    start_btn.addEventListener('click', () => {
+        start_btn.style.display = 'none';
+        document.querySelector('.no-touch').style.display = 'none';
+        card_setting(karo, sero);
+    });
 }
 
 shupple();
-card_setting(karo, sero);
+starting();
+
 
 
