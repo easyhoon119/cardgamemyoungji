@@ -37,8 +37,9 @@ body {
   border-radius: 15px;
   background-color: white;
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,10 +148,5 @@ body {
 
   .containers {
     margin-top: 60px;
-  }
-
-  .start_btn {
-    top: 40%;
-    left: 23%;
   }
 }
