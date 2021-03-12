@@ -31,13 +31,30 @@ body {
   opacity: 0.5;
   position: relative;
 }
+
+.explain {
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .start_btn {
   width: 200px;
-  height: 100px;
+  height: 80px;
   border-radius: 15px;
   background-color: white;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -45,6 +62,7 @@ body {
   align-items: center;
   transition: 0.5s;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .start_btn:hover {
