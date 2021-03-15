@@ -33,7 +33,7 @@ body {
 }
 
 .explain {
-  width: 250px;
+  width: 350px;
   height: 300px;
   border-radius: 15px;
   background-color: white;
@@ -43,9 +43,12 @@ body {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+input {
+  display: block;
 }
 
 .start_btn {
