@@ -4,6 +4,7 @@ var karo = 4;
 var sero = 3;
 var color = ['baekma.jpeg', 'baekma.jpeg', 'changjo.jpg', 'changjo.jpg', 'chaplegwan.jpg', 'chaplegwan.jpg', 'chargwan.jpg', 'chargwan.jpg', 'chasaedae.jpeg', 'chasaedae.jpeg', 'undongjang.jpg', 'undongjang.jpg'];
 var color_sub = color.slice();
+var check1 = document.getElementById('start_check');
 var back_color = [];
 var click_flag = true;
 var count_card = [];
