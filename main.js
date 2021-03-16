@@ -11,6 +11,7 @@ var count_card = [];
 var first_card = [];
 var complete_card = [];
 var cnt = 0;
+var count = 0;
 var start_time;
 var retryState = false;
 var l = 0;
@@ -127,10 +128,16 @@ function card_setting(karo, sero) {
 }
 function starting() {
     const start_btn = document.querySelector('.start_btn');
-    start_btn.addEventListener('click', () => {
-        start_btn.style.display = 'none';
-        document.querySelector('.no-touch').style.display = 'none';
-        card_setting(karo, sero);
+    check1.addEventListener('click', () => {
+        check1.checked = true;
+        start_btn.addEventListener('click', () => {
+            start_btn.style.display = 'none';
+            document.querySelector('.no-touch').style.display = 'none';
+            count += 1;
+            if (count == 1) {
+                card_setting(karo, sero);
+            }
+        });
     });
 }
 
