@@ -112,9 +112,9 @@ function card_setting(karo, sero) {
     container2.appendChild(hide);
     document.querySelector('.background').appendChild(container2);
     document.querySelectorAll('.card').forEach(function (card, index) {
-        setTimeout(function () {
+        document.addEventListener('DOMContentLoaded', setTimeout(function () {
             card.classList.add('flipped');
-        }, 2000 + 100 * index);
+        }, 2000 + 100 * index))
     });
 
     setTimeout(function () {
