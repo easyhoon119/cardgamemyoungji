@@ -63,7 +63,7 @@ function card_setting(karo, sero) {
                                     retry.innerHTML = '다시하기';
                                     var compl_time = new Date();
                                     total_time = (compl_time - start_time) / 1000;
-                                    var msg = total_time + '초 걸렸습니다.';
+                                    var msg = total_time + '초 걸렸습니다.\n* 태그 : #mju_run, #당방봄, #명지대타짜';
                                     if (cnt == 0) {
                                         alert(msg);
                                         cnt += 1;
