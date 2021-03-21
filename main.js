@@ -72,6 +72,7 @@ function card_setting(karo, sero) {
                                         sign1 = window.prompt('학과를 입력해주세요');
                                         sign2 = window.prompt('이름을 입력해주세요');
                                         alert(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.');
+                                        window.location.href = "mailto:easyhoon119@naver.com";
                                         cnt += 1;
                                     }
                                     hide.style.display = 'block';
