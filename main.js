@@ -2,6 +2,9 @@
 'use strict';
 var karo = 4;
 var sero = 3;
+var sign;
+var sign1;
+var sign2;
 var color = ['baekma.jpeg', 'baekma.jpeg', 'changjo.jpg', 'changjo.jpg', 'chaplegwan.jpg', 'chaplegwan.jpg', 'chargwan.jpg', 'chargwan.jpg', 'chasaedae.jpeg', 'chasaedae.jpeg', 'undongjang.jpg', 'undongjang.jpg'];
 var color_sub = color.slice();
 var check1 = document.getElementById('start_check');
@@ -65,7 +68,10 @@ function card_setting(karo, sero) {
                                     total_time = (compl_time - start_time) / 1000;
                                     var msg = total_time + '초 걸렸습니다.\n* 태그 : #mju_run, #당방봄, #명지대타짜\n제 48대 Run 총학생회';
                                     if (cnt == 0) {
-                                        alert(msg);
+                                        sign = window.prompt(msg + '학번을 입력하세요');
+                                        sign1 = window.prompt('\n학과를 입력해주세요');
+                                        sign2 = window.prompt('이름을 입력해주세요');
+                                        alert(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.');
                                         cnt += 1;
                                     }
                                     hide.style.display = 'block';
