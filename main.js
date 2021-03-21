@@ -71,7 +71,7 @@ function card_setting(karo, sero) {
                                         sign = window.prompt('학번을 입력하세요');
                                         sign1 = window.prompt('학과를 입력해주세요');
                                         sign2 = window.prompt('이름을 입력해주세요');
-                                        alert(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.');
+                                        alert(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n현재화면을 캡쳐해주세요!\n확인버튼시 자동으로 메일보내기가 켜집니다.\n최고기록이 아닐시 메일 보내기에서 취소버튼을 눌러주세요');
                                         window.location.href = "mailto:easyhoon119@naver.com";
                                         cnt += 1;
                                     }
