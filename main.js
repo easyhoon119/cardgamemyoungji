@@ -68,11 +68,13 @@ function card_setting(karo, sero) {
                                     total_time = (compl_time - start_time) / 1000;
                                     var msg = total_time + '초 걸렸습니다.\n* 태그 : #mju_run, #당방봄, #명지대타짜\n제 48대 Run 총학생회';
                                     if (cnt == 0) {
-                                        sign = window.prompt('학번을 입력하세요');
-                                        sign1 = window.prompt('학과를 입력해주세요');
-                                        sign2 = window.prompt('이름을 입력해주세요');
-                                        alert(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n현재화면을 캡쳐해주세요!\n확인버튼시 자동으로 메일보내기가 켜집니다.\n최고기록이 아닐시 메일 보내기에서 취소버튼을 눌러주세요');
-                                        window.location.href = "mailto:easyhoon119@naver.com";
+                                        sign = window.prompt('학번을 입력하세요(ex 60xxxxxx)');
+                                        sign1 = window.prompt('학과를 입력해주세요(ex xxxxx학과)');
+                                        sign2 = window.prompt('이름을 입력해주세요(ex 홍길동)');
+                                        var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n현재화면을 캡쳐해주세요!\n확인버튼시 자동으로 메일보내기가 켜집니다.\n최고기록이 아닐 시 취소버튼을 눌러주세요');
+                                        if (last_check == true) {
+                                            window.location.href = "mailto:easyhoon119@naver.com";
+                                        }
                                         cnt += 1;
                                     }
                                     hide.style.display = 'block';
