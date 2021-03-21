@@ -181,3 +181,7 @@ input {
     margin-top: 60px;
   }
 }
+
+.addthis_inline_share_toolbox {
+  display: none;
+}

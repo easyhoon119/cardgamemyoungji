@@ -68,8 +68,8 @@ function card_setting(karo, sero) {
                                     total_time = (compl_time - start_time) / 1000;
                                     var msg = total_time + '초 걸렸습니다.\n* 태그 : #mju_run, #당방봄, #명지대타짜\n제 48대 Run 총학생회';
                                     if (cnt == 0) {
-                                        sign = window.prompt(msg + '학번을 입력하세요');
-                                        sign1 = window.prompt('\n학과를 입력해주세요');
+                                        sign = window.prompt('학번을 입력하세요');
+                                        sign1 = window.prompt('학과를 입력해주세요');
                                         sign2 = window.prompt('이름을 입력해주세요');
                                         alert(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.');
                                         cnt += 1;
