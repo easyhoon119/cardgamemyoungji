@@ -71,9 +71,13 @@ function card_setting(karo, sero) {
                                         sign = window.prompt('학번을 입력하세요(ex 60xxxxxx)');
                                         sign1 = window.prompt('학과를 입력해주세요(ex xxxxx학과)');
                                         sign2 = window.prompt('이름을 입력해주세요(ex 홍길동)');
+                                        var last_msg = (total_time + '초\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n참여가 완료 되었습니다.');
+                                        var email = ('easyhoon119@naver.com');
+                                        var subject = ('명지 카드게임');
+                                        var body = ('이곳에 캡쳐화면을 첨부하여 메일을 보내주세요!');
                                         var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n현재화면을 캡쳐해주세요!\n확인버튼시 자동으로 메일보내기가 켜집니다.\n최고기록이 아닐 시 취소버튼을 눌러주세요');
                                         if (last_check == true) {
-                                            window.location.href = "mailto:easyhoon119@naver.com";
+                                            window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + last_msg + '\n' + body;
                                         }
                                         cnt += 1;
                                     }
