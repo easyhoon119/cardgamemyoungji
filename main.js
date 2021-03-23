@@ -85,7 +85,7 @@ function card_setting(karo, sero) {
                                                     "학번": sign,
                                                     "이름": sign2,
                                                     "학과": sign1,
-                                                    "시간": total_time + '초',
+                                                    "시간": total_time,
                                                     "타임스탬프": sign3
                                                 },
                                                 success: function (response) {
