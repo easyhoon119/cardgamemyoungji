@@ -4,6 +4,7 @@ var sero = 3;
 var sign;
 var sign1;
 var sign2;
+var sign3;
 var color = ['baekma.jpeg', 'baekma.jpeg', 'changjo.jpg', 'changjo.jpg', 'chaplegwan.jpg', 'chaplegwan.jpg', 'chargwan.jpg', 'chargwan.jpg', 'chasaedae.jpeg', 'chasaedae.jpeg', 'undongjang.jpg', 'undongjang.jpg'];
 var color_sub = color.slice();
 var check1 = document.getElementById('start_check');
@@ -70,20 +71,22 @@ function card_setting(karo, sero) {
                                         sign = window.prompt('학번을 입력하세요(ex 60xxxxxx)');
                                         sign1 = window.prompt('학과를 입력해주세요(ex xxxxx학과)');
                                         sign2 = window.prompt('이름을 입력해주세요(ex 홍길동)');
+                                        sign3 = new Date();
                                         var last_msg = (total_time + '초\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n참여가 완료 되었습니다.');
                                         var email = ('easyhoon119@naver.com');
                                         var subject = ('명지 카드게임');
                                         var body = ('이곳에 캡쳐화면을 첨부하여 메일을 보내주세요!');
-                                        var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n현재화면을 캡쳐해주세요!\n확인버튼시 자동으로 메일보내기가 켜집니다.\n최고기록이 아닐 시 취소버튼을 눌러주세요');
+                                        var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n확인버튼시 자동으로 기록이 저장 됩니다.\n최고기록이 아닐 시 취소버튼을 눌러주세요');
                                         if (last_check == true) {
                                             $.ajax({
                                                 type: "GET",
-                                                url: "https://script.google.com/macros/s/AKfycbxnkhmjZFrXf2roPrrfUzmdw7g7e-L9iP5lPYMNZVmWR6HMfifNiBU4z45aFWrUZo36Kg/exec",
+                                                url: "https://script.google.com/macros/s/AKfycbyl38p7IUUVlDIJYcMlQXqxX44aB2Fubb3eNSCZzmTLygsh2hjRcenjw93VB5MmXpkG9g/exec",
                                                 data: {
                                                     "학번": sign,
                                                     "이름": sign2,
                                                     "학과": sign1,
-                                                    "시간": total_time
+                                                    "시간": total_time + '초',
+                                                    "타임스탬프": sign3
                                                 },
                                                 success: function (response) {
                                                     console.log('입력 완료.');
