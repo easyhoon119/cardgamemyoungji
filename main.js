@@ -71,6 +71,9 @@ function card_setting(karo, sero) {
                                         sign = window.prompt('학번을 입력하세요(ex 60xxxxxx)');
                                         sign1 = window.prompt('학과를 입력해주세요(ex xxxxx학과)');
                                         sign2 = window.prompt('이름을 입력해주세요(ex 홍길동)');
+                                        if (sign === null) sign = window.prompt('학번을 다시 입력하세요(ex 60xxxxxx)');
+                                        if (sign1 === null) sign1 = window.prompt('학과를 다시 입력해주세요(ex xxxxx학과)');
+                                        if (sign2 === null) sign2 = window.prompt('이름을 다시 입력해주세요(ex 홍길동)');
                                         sign3 = new Date();
                                         var last_msg = (total_time + '초\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n참여가 완료 되었습니다.');
                                         var email = ('easyhoon119@naver.com');
