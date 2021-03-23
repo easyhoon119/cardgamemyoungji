@@ -1,4 +1,3 @@
-
 'use strict';
 var karo = 4;
 var sero = 3;
@@ -77,7 +76,20 @@ function card_setting(karo, sero) {
                                         var body = ('이곳에 캡쳐화면을 첨부하여 메일을 보내주세요!');
                                         var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n현재화면을 캡쳐해주세요!\n확인버튼시 자동으로 메일보내기가 켜집니다.\n최고기록이 아닐 시 취소버튼을 눌러주세요');
                                         if (last_check == true) {
-                                            window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + last_msg + '\n' + body;
+                                            $.ajax({
+                                                type: "GET",
+                                                url: "https://script.google.com/macros/s/AKfycbxnkhmjZFrXf2roPrrfUzmdw7g7e-L9iP5lPYMNZVmWR6HMfifNiBU4z45aFWrUZo36Kg/exec",
+                                                data: {
+                                                    "학번": sign,
+                                                    "이름": sign2,
+                                                    "학과": sign1,
+                                                    "시간": total_time
+                                                },
+                                                success: function (response) {
+                                                    console.log('입력 완료.');
+                                                }
+                                            });
+                                            //window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + last_msg + '\n' + body;
                                         }
                                         cnt += 1;
                                     }
