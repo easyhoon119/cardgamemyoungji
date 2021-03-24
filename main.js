@@ -79,7 +79,7 @@ function card_setting(karo, sero) {
                                         var email = ('easyhoon119@naver.com');
                                         var subject = ('명지 카드게임');
                                         var body = ('이곳에 캡쳐화면을 첨부하여 메일을 보내주세요!');
-                                        var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n확인버튼시 자동으로 기록이 저장 됩니다.\n최고기록이 아닐 시 취소버튼을 눌러주세요');
+                                        var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n확인버튼시 자동으로 기록이 저장 됩니다.\n취소버튼시 기록이 저장되지 않습니다.');
                                         if (last_check == true) {
                                             $.ajax({
                                                 type: "GET",
