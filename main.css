@@ -45,7 +45,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  padding-top: 50px;
+  padding-top: 30px;
   box-sizing: border-box;
 }
 
@@ -68,6 +68,7 @@ body {
 
 label {
   position: absolute;
+  margin-top: 14px;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -199,7 +200,13 @@ input {
   }
 
   .explain {
-    width: 95%;
-    height: 285px;
+    width: 98%;
+    height: 290px;
+    font-size: 16px;
+  }
+
+  .start_btn {
+    width: 200px;
+    height: 70px;
   }
 }
