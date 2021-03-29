@@ -83,7 +83,7 @@ function card_setting(karo, sero) {
                                         if (last_check == true) {
                                             $.ajax({
                                                 type: "GET",
-                                                url: "https://script.google.com/macros/s/AKfycbyl38p7IUUVlDIJYcMlQXqxX44aB2Fubb3eNSCZzmTLygsh2hjRcenjw93VB5MmXpkG9g/exec",
+                                                url: "https://script.google.com/macros/s/AKfycbwImxeX-BvLZjz0pUj2vZX4hG_JXY8B7ZOM5Z-R-Z2MwRgS5ggtCKqs0-c9ogdZXcnI3Q/exec",
                                                 data: {
                                                     "학번": sign,
                                                     "이름": sign2,
@@ -158,6 +158,7 @@ function card_setting(karo, sero) {
 
 }
 function starting() {
+
     const start_btn = document.querySelector('.start_btn');
     check1.addEventListener('click', () => {
         check1.checked = true;
