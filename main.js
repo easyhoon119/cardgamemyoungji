@@ -5,6 +5,7 @@ var sign;
 var sign1;
 var sign2;
 var sign3;
+var sign4;
 var color = ['baekma.jpeg', 'baekma.jpeg', 'changjo.jpg', 'changjo.jpg', 'chaplegwan.jpg', 'chaplegwan.jpg', 'chargwan.jpg', 'chargwan.jpg', 'chasaedae.jpeg', 'chasaedae.jpeg', 'undongjang.jpg', 'undongjang.jpg'];
 var color_sub = color.slice();
 var check1 = document.getElementById('start_check');
@@ -71,20 +72,23 @@ function card_setting(karo, sero) {
                                         sign = window.prompt('학번을 입력하세요(ex 60xxxxxx)');
                                         sign1 = window.prompt('학과를 입력해주세요(ex xxxxx학과)');
                                         sign2 = window.prompt('이름을 입력해주세요(ex 홍길동)');
+                                        sign4 = window.prompt('전화번호를 입력해주세요(ex 010-xxxx-xxxx)');
                                         if (sign === null) sign = window.prompt('학번을 다시 입력하세요(ex 60xxxxxx)');
                                         if (sign1 === null) sign1 = window.prompt('학과를 다시 입력해주세요(ex xxxxx학과)');
                                         if (sign2 === null) sign2 = window.prompt('이름을 다시 입력해주세요(ex 홍길동)');
+                                        if (sign4 === null) sign4 = window.prompt('전화번호를 다시 입력해주세요(ex 010-xxxx-xxxx)');
                                         sign3 = new Date();
                                         var last_msg = (total_time + '초\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n참여가 완료 되었습니다.');
                                         var email = ('easyhoon119@naver.com');
                                         var subject = ('명지 카드게임');
                                         var body = ('이곳에 캡쳐화면을 첨부하여 메일을 보내주세요!');
-                                        var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + '참여가 완료 되었습니다.\n확인버튼시 자동으로 기록이 저장 됩니다.\n취소버튼시 기록이 저장되지 않습니다.');
+                                        var last_check = confirm(total_time + '초' + '\n' + sign + '\n' + sign1 + '\n' + sign2 + '\n' + sign4 + '\n' + '참여가 완료 되었습니다.\n확인버튼시 자동으로 기록이 저장 됩니다.\n취소버튼시 기록이 저장되지 않습니다.');
                                         if (last_check == true) {
                                             $.ajax({
                                                 type: "GET",
-                                                url: "https://script.google.com/macros/s/AKfycbwImxeX-BvLZjz0pUj2vZX4hG_JXY8B7ZOM5Z-R-Z2MwRgS5ggtCKqs0-c9ogdZXcnI3Q/exec",
+                                                url: "https://script.google.com/macros/s/AKfycbzVD7_AqXHPxM8dZBZWeBeALw7ZyWsc0GylL3nN4jjB-kCPFsmcYl6J2hF4C8xW6LxVSQ/exec",
                                                 data: {
+                                                    '전화번호': sign4,
                                                     "학번": sign,
                                                     "이름": sign2,
                                                     "학과": sign1,
