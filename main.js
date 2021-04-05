@@ -86,7 +86,7 @@ function card_setting(karo, sero) {
                                         if (last_check == true) {
                                             $.ajax({
                                                 type: "GET",
-                                                url: "https://script.google.com/macros/s/AKfycbzVD7_AqXHPxM8dZBZWeBeALw7ZyWsc0GylL3nN4jjB-kCPFsmcYl6J2hF4C8xW6LxVSQ/exec",
+                                                url: "https://script.google.com/macros/s/AKfycbwIXAP513s8MRWS8Tk3L5pBaRyWD4vsvAxjPBto109ITUDLLp5dl0O_fA53sfIp7mnMLA/exec",
                                                 data: {
                                                     '전화번호': sign4,
                                                     "학번": sign,
