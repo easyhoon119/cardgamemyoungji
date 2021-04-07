@@ -28,7 +28,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body oncontextmenu="return false;">
     <div class="background">
         <div class="no-touch">
             <div class="mark"></div>
@@ -40,7 +40,26 @@
             <div class="start_btn">시작하기</div>
             <!-- <iframe class="score"src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT87WW1-3kEa1qiWkOZY6VQbvM1oENYmkk2ff4xji7lDrtSN1cy7tZKQMl422dwLOUmOMps8Rheec6m/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;range=B2:D7&amp;chrome=false"></iframe> -->
         </div>
-        <script src="main.js" defer></script>
+        <script type="text/javascript">
+            // F12 버튼 방지 
+            $(document).ready(function(){ $(document).bind('keydown',function(e){ 
+                if ( e.keyCode == 123 /* F12 */) {
+                    e.preventDefault(); 
+                    e.returnValue = false; 
+                } 
+                }); 
+            });
+            // 우측 클릭 방지 
+            document.onmousedown=disableclick; 
+            status="Right click is not available."; 
+            function disableclick(event){ 
+                if (event.button==2) { 
+                    alert(status); 
+                    return false; 
+                } 
+            }
+        </script>
+        <script src="main2.js" defer></script>
     </div>
 </body>
 
